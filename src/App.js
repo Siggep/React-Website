@@ -6,7 +6,7 @@ import Header from "./components/header";
 import Navigation from "./components/navigation";
 
 import CaseStudies from "./pages/caseStudies";
-import Approach from "./pages/approach";
+import Cookies from "./pages/cookies";
 import Services from "./pages/services";
 import About from "./pages/about";
 import Home from "./pages/home";
@@ -14,9 +14,9 @@ import Home from "./pages/home";
 const routes = [
   { path: "/", name: "Home", Component: Home },
   { path: "/case-studies", name: "caseStudies", Component: CaseStudies },
-  { path: "/approach", name: "approach", Component: Approach },
+  { path: "/cookies", name: "cookies", Component: Cookies },
   { path: "/services", name: "services", Component: Services },
-  { path: "/about-us", name: "about", Component: About }
+  { path: "/about-us", name: "about", Component: About },
 ];
 
 function debounce(fn, ms) {
@@ -33,7 +33,7 @@ function debounce(fn, ms) {
 function App() {
   const [dimensions, setDimensions] = React.useState({
     height: window.innerHeight,
-    width: window.innerWidth
+    width: window.innerWidth,
   });
 
   useEffect(() => {
@@ -42,7 +42,7 @@ function App() {
     const debouncedHandleResize = debounce(function handleResize() {
       setDimensions({
         height: window.innerHeight,
-        width: window.innerWidth
+        width: window.innerWidth,
       });
     }, 1000);
 
@@ -54,7 +54,7 @@ function App() {
   return (
     <>
       <Header dimensions={dimensions} />
-      <div className='App'>
+      <div className="App">
         {routes.map(({ path, Component }) => (
           <Route key={path} exact path={path}>
             <Component dimensions={dimensions} />

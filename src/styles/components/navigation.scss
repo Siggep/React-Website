@@ -73,9 +73,8 @@ nav {
           padding: 0;
           width: 50%;
           &:nth-child(2),
-          &:nth-child(3) {
+          &:nth-child(4) {
             @include media("<=654px") {
-              display: none;
             }
           }
           .nav-info-label {

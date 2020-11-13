@@ -4,62 +4,66 @@ import { NavLink } from "react-router-dom";
 const Navigation = () => {
   return (
     <nav>
-      <div className='container'>
-        <div className='nav-columns'>
-          <div className='nav-column'>
-            <div className='nav-label'>Menu</div>
-            <ul className='nav-links'>
+      <div className="container">
+        <div className="nav-columns">
+          <div className="nav-column">
+            <div className="nav-label">Menu</div>
+            <ul className="nav-links">
               <li>
-                <NavLink to='/case-studies' exact>
+                <NavLink to="/case-studies" exact>
                   Case Studies
                 </NavLink>
               </li>
-              <li>
-                <NavLink to='/approach' exact>
+              {/* <li>
+                <NavLink to="/approach" exact>
                   Approach
                 </NavLink>
-              </li>
-              <li>
-                <NavLink to='/services' exact>
+              </li> */}
+              {/* <li>
+                <NavLink to="/services" exact>
                   Services
                 </NavLink>
-              </li>
+              </li> */}
               <li>
-                <NavLink to='/about-us' exact>
+                <NavLink to="/about-us" exact>
                   About us
                 </NavLink>
               </li>
             </ul>
           </div>
-          <div className='nav-column'>
-            <div className='nav-label'>Contact</div>
-            <div className='nav-infos'>
-              <ul className='nav-info'>
-                <li className='nav-info-label'>Email</li>
+          <div className="nav-column">
+            <div className="nav-label">Contact</div>
+            <div className="nav-infos">
+              <ul className="nav-info">
+                <li className="nav-info-label">Email</li>
                 <li>
-                  <NavLink to='/contact' exact>
-                    Get in touch with us
-                  </NavLink>
+                  <a href="mailto:Info@Westnovo.com">Info@Westnovo.com</a>
                 </li>
-                <li>
-                  <NavLink to='/audit' exact>
+                {/* <li>
+                  <NavLink to="/audit" exact>
                     Get a free audit
                   </NavLink>
+                </li> */}
+              </ul>
+              <ul className="nav-info">
+                <li className="nav-info-label">Headquarter</li>
+                <li>Grev Turegatan 7</li>
+                <li>114 46 Stockholm</li>
+                <li>Sweden</li>
+              </ul>
+              <ul className="nav-info">
+                <li className="nav-info-label">Phone</li>
+                <li>
+                  <a href="tel:+465555632">+46 (0) 70 555 56 32</a>
                 </li>
               </ul>
-              <ul className='nav-info'>
-                <li className='nav-info-label'>Headquarter</li>
-                <li>Route du Jura 49</li>
-                <li>1700 Fribourg</li>
-                <li>Switzerland</li>
-              </ul>
-              <ul className='nav-info'>
-                <li className='nav-info-label'>Phone</li>
-                <li>+41 (0) 79 510 28 70</li>
-              </ul>
-              <ul className='nav-info'>
-                <li className='nav-info-label'>Legal</li>
-                <li>Privacy & Cookies</li>
+              <ul className="nav-info">
+                <li className="nav-info-label">Legal</li>
+                <li>
+                  <NavLink to="/cookies" exact>
+                    Privacy & Cookies
+                  </NavLink>
+                </li>
               </ul>
             </div>
           </div>
